@@ -21,9 +21,10 @@ dependencyResolutionManagement {
 
 rootProject.name = "AndroidVoiceAssistant"
 include(":app")
-include(":dynamicfeature")
+//include(":dynamicfeature")
 include(":wake")
 include(":asr")
 include(":nlp")
 include(":tts")
 include(":core")
+include(":asr2")

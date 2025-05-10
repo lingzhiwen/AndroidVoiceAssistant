@@ -1,19 +1,35 @@
 [versions]
+activityCompose = "1.7.2"
 agp = "8.6.0"
-kotlin = "1.9.0"
+kotlin = "1.7.20"
 coreKtx = "1.10.1"
 appcompat = "1.6.1"
 material = "1.10.0"
+porcupineAndroid = "3.0.0"
 voskAndroid = "0.3.32"
+compose = "1.5.3"
+library ="8.1.2"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
 
 [libraries]
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+androidx-compose-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "compose" }
+androidx-compose-material = { group = "androidx.compose.material", name = "material", version.ref = "compose" }
+androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "compose" }
+androidx-lifecycle-runtime-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version = "2.6.1" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+porcupine-android = { module = "ai.picovoice:porcupine-android", version.ref = "porcupineAndroid" }
 vosk-android = { module = "com.alphacephei:vosk-android", version.ref = "voskAndroid" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-android-dynamic-feature = { id = "com.android.dynamic-feature", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref ="library"}
 

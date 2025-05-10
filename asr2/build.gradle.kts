@@ -4,12 +4,14 @@ plugins {
 }
 
 android {
-    namespace = "com.ling.voiceassistant.asr"
+    namespace = "com.ling.asr2"
     compileSdk = 34
 
     defaultConfig {
-        //applicationId = "com.ling.voiceassistant.asr"
         minSdk = 24
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -35,6 +37,7 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation(libs.vosk.android)
-    implementation (libs.porcupine.android)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
 }

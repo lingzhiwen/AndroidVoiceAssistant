@@ -32,7 +32,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    dynamicFeatures += setOf(":dynamicfeature")
+    //dynamicFeatures += setOf(":dynamicfeature")
+    buildFeatures {
+        compose = true // 启用 Compose
+    }
 }
 
 dependencies {
@@ -40,4 +43,13 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
+
+    // Jetpack Compose 依赖
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.material)
+    implementation(libs.androidx.compose.ui.tooling)
+    implementation(libs.androidx.lifecycle.runtime.compose)
+    implementation(libs.androidx.activity.compose)
+//
+    implementation(project(":asr"))
 }
